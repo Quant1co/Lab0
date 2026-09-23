@@ -1,13 +1,68 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <title>Lab 01</title>
-    <meta charset="UTF-8" />
-
-    <script src="src/index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа: Численное интегрирование</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 { color: #1a73e8; margin-bottom: 10px; }
+        p { color: #5f6368; font-size: 14px; line-height: 1.5; }
+        button {
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+        button:hover { background-color: #1557b0; }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e8f0fe;
+            border-radius: 5px;
+            display: none;
+            text-align: left;
+        }
+    </style>
 </head>
-
 <body>
 
+<div class="card">
+    <h2>Лабораторная работа</h2>
+    <p><b>Вариант 3:</b> Интегрирование функции <br><code>F(x) = x² - x + 1</code><br>Методом правых прямоугольников.</p>
+    
+    <button onclick="run()">Вычислить интеграл</button>
+
+    <div id="resultBox" class="result">
+        <b style="color: #1a73e8;">Результат расчета:</b>
+        <div id="resultText" style="margin-top: 8px; font-family: monospace;"></div>
+    </div>
+</div>
+
+
+<script src="src/index.js"></script>
 </body>
 </html>
